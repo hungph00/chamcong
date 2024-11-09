@@ -59,12 +59,12 @@ public class TinhLoiService {
             return new ErrorDTO(0.0, false, 0.0);
         }
         int phut = (gioSang.getHour() * 60) + gioSang.getMinute();
-        if (phut >= 6 * 60 && phut <= 8 * 60) {
+        if (phut >= 6 * 60 && phut <= (8 * 60) + 5) {
 //            return "Sáng đi làm: 0 lỗi";
             return new ErrorDTO(0.5, false, 0.0);
         } else if (phut <= 10 * 60) {
 //            return "Sáng đi làm: 1 lỗi";
-            return new ErrorDTO(0.5, true, phut - (8 * 60));
+            return new ErrorDTO(0.5, true, phut - ((8 * 60) + 5));
         } else if (phut <= (13 * 60) + 30) {
             return new ErrorDTO(0.0, false, 0.0);
         }

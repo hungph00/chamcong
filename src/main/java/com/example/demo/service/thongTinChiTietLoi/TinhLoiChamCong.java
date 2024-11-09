@@ -52,7 +52,7 @@ public class TinhLoiChamCong {
             return "Nghỉ sáng";
         }
         int phut = (gioSang.getHour() * 60) + gioSang.getMinute();
-        if (phut >= 6 * 60 && phut <= 8 * 60) {
+        if (phut >= 6 * 60 && phut <= (8 * 60) + 5) {
             return "Sáng đi làm: 0 lỗi";
         } else if (phut <= 10 * 60) {
             return "Sáng đi làm: 1 lỗi";
