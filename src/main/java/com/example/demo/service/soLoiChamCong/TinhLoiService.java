@@ -90,7 +90,7 @@ public class TinhLoiService {
             return new ErrorDTO(0.5, true, ((17 * 60) + 30) - phut);
 //            return "Chiều: 1 lỗi";
         }
-        return new ErrorDTO(0.0, true, 0.0);
+        return new ErrorDTO(0.0, false, 0.0);
 //        return "Không tính chấm công chiều";
     }
 
